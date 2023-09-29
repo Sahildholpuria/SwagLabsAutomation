@@ -6,10 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class POI {
+public class SwagLabsAutomation {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         ChromeDriver chromeDriver = new ChromeDriver();
