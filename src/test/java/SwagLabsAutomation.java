@@ -20,15 +20,23 @@ public class SwagLabsAutomation {
         Cell cell = row.getCell(0);
 //        System.out.println(sheet.getRow(0).getCell(0));
 
-        String username = String.valueOf(sheet.getRow(0).getCell(0));
-        String password = String.valueOf(sheet.getRow(0).getCell(1));
+//        Valid Username and Password
+        String validUsername = String.valueOf(sheet.getRow(0).getCell(0));
+        String validPassword = String.valueOf(sheet.getRow(0).getCell(1));
+
+//        Locked Username and Password
+        String invalidUsername = String.valueOf(sheet.getRow(1).getCell(0));
+        System.out.println(sheet.getRow(1).getCell(0));
+        String invalidPassword = String.valueOf(sheet.getRow(1).getCell(1));
+        System.out.println(sheet.getRow(1).getCell(1));
+
 
         chromeDriver.get("https://www.saucedemo.com/");
 
         Thread.sleep(1000);
 
-        chromeDriver.findElement(By.id("user-name")).sendKeys(username);
-        chromeDriver.findElement(By.id("password")).sendKeys(password);
+        chromeDriver.findElement(By.id("user-name")).sendKeys(validUsername);
+        chromeDriver.findElement(By.id("password")).sendKeys(validPassword);
 
         chromeDriver.findElement(By.id("login-button")).click();
 
